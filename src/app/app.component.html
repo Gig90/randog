@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="overflow: hidden;">
+  <div class="row bg-dark text-light sticky-top" style="box-sizing: border-box;">
+    <div class="col-3 pl-4" style="box-sizing: border-box">
+      <h2>
+        {{ title }}
+      </h2>
+      <h5>Random Dog images</h5>
+    </div>
+    <div class="col-9 pr-4 mt-4" style="text-align: right;">
+        <span class="align-middle">Choose a breed and sub breed from the list and enjoy the random photo.</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2 list-group-flush sidebar">
+      <div *ngFor="let breed of breeds" 
+      class="list-group-item list-group-item-action pl-4" 
+      style="cursor: pointer;"
+      [ngClass]="{'bg-info text-light': breed === active}"
+      (click)="getUrl($event, breed)">{{breed | uppercase}}</div>
+    </div>
+    <div class="col-10">
+      <img  class="centerimg" src="{{ urlImage }}" alt="">
+    </div>
+  </div>
+</div>
