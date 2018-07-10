@@ -1,4 +1,5 @@
 import { browser, by, element } from 'protractor';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 export class AppPage {
   navigateTo() {
@@ -6,6 +7,6 @@ export class AppPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('.col-3.pl-4 h2')).getText();
   }
 }

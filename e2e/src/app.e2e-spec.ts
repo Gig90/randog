@@ -1,4 +1,5 @@
 import { AppPage } from './app.po';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -9,6 +10,10 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to randog-app!');
+    expect(page.getParagraphText()).toEqual('RanDog');
   });
+});
+
+describe('detect image at click', () => {
+  // test per la presenza delle immagini
 });
